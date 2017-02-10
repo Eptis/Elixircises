@@ -1,0 +1,1 @@
+# Collection of Exercism exercises
