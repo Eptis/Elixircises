@@ -5,5 +5,13 @@ defmodule Acronym do
   """
   @spec abbreviate(String.t()) :: String.t()
   def abbreviate(string) do
+    string
+    |> String.split(~r"(?=[[:upper:]])|\s")
+    |> Enum.map(fn string ->
+      string
+      |> String.first
+      |> String.upcase
+    end)
+    |> List.to_string
   end
 end
